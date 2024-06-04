@@ -11,22 +11,22 @@ export async function searchByKeywords(
     
     try{
          // Check the user's inputs and make sure they're valid
-        const title = formData.get('allowed_keywords') as string;
-        const code = formData.get('excluded_keywords') as string;
-        console.log("title--------", title);
-        console.log("code---------", code);
+        const allowedKeywords = formData.get('allowed_keywords') as string;
+        const excludedKeywords = formData.get('excluded_keywords') as string;
+        console.log("allowedKeywords--------", allowedKeywords);
+        console.log("allowedKeywords---------", excludedKeywords);
 
-        if(typeof title != 'string' || title.length < 3){
-            return {
-                message: 'Title must be longer'
-            };
-        }
+        // if(typeof title != 'string' || title.length < 3){
+        //     return {
+        //         message: 'Title must be longer'
+        //     };
+        // }
 
-        if(typeof code != 'string' || code.length < 10){
-            return {
-                message: 'Code must be longer'
-            };
-        }
+        // if(typeof code != 'string' || code.length < 10){
+        //     return {
+        //         message: 'Code must be longer'
+        //     };
+        // }
 
         // Create a new record in the database
         // const snippet = await db.snippet.create({
