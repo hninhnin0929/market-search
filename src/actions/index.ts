@@ -15,11 +15,7 @@ export async function searchByKeywords(
     console.log("allowedKeywords--------", allowedKeywords);
     console.log("allowedKeywords---------", excludedKeywords);
 
-    // if(typeof title != 'string' || title.length < 3){
-    //     return {
-    //         message: 'Title must be longer'
-    //     };
-    // }
+
 
     if (!allowedKeywords || allowedKeywords.trim() === "") {
       return {
