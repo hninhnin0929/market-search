@@ -1,3 +1,4 @@
+// actions/index.ts
 "use server";
 
 import { redirect } from "next/navigation";
@@ -20,19 +21,11 @@ export async function searchByKeywords(
     //     };
     // }
 
-    // if(typeof code != 'string' || code.length < 10){
-    //     return {
-    //         message: 'Code must be longer'
-    //     };
-    // }
-
-    // Create a new record in the database
-    // const snippet = await db.snippet.create({
-    //     data: {
-    //         title,
-    //         code
-    //     }
-    // });
+    if (!allowedKeywords || allowedKeywords.trim() === "") {
+      return {
+        message: "Enter allowed keywords",
+      };
+    }
 
     const searchData = {
       searchedKeywords: allowedKeywords
