@@ -78,11 +78,17 @@ export default function Home() {
             <span className="ml-2 text-gray-700">발주계획만</span>
           </label>
 
+          {formState.message ? (
+            <div className="my-2 p-2 bg-red-200 border rounded border-red-400">
+              {formState.message}
+            </div>
+          ) : null}
+
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
-            //   onClick={handleSearch}
+              //   onClick={handleSearch}
             >
               EXCEL다운로드
             </button>
